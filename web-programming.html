@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemrograman Web - Ummu Qoshiroh Nur Azziza</title>
+    <link rel="stylesheet" href="csMateri.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">My Portfolio</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="web-programming.html" class="active">Pemrograman Web</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="web-programming-container">
+        <h1 class="section-header">Materi Pemrograman Web</h1>
+
+        <div class="topic-section">
+            <h2>Pertemuan 1: Pengenalan HTML</h2>
+            <div class="language-tag">HTML</div>
+            <div class="code-example">
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Halaman Pertamaku&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Selamat Datang di Dunia Web!&lt;/h1&gt;
+    &lt;p&gt;Ini adalah contoh halaman HTML sederhana.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2>Pertemuan 2: Pengenalan CSS</h2>
+            <div class="language-tag">CSS</div>
+            <div class="code-example">
+                <pre>
+/* Contoh styling dasar */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+                </pre>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2>Pertemuan 3: Pengenalan JavaScript</h2>
+            <div class="language-tag">JavaScript</div>
+            <div class="code-example">
+                <pre>
+// Contoh fungsi interaktif
+function hitungLuas() {
+    let panjang = document.getElementById('panjang').value;
+    let lebar = document.getElementById('lebar').value;
+    let luas = panjang * lebar;
+    
+    document.getElementById('hasil').innerHTML = 
+        `Luas persegi panjang adalah: ${luas}`;
+}
+
+// Contoh event listener
+document.getElementById('hitung').addEventListener('click', hitungLuas);
+                </pre>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2>Pertemuan 4: Pengenalan PHP</h2>
+            <div class="language-tag">PHP</div>
+            <div class="code-example">
+                <pre>
+&lt;?php
+// Contoh dasar PHP
+$nama = "Ummu Qoshiroh";
+$umur = 20;
+
+echo "Nama saya: " . $nama . "&lt;br&gt;";
+echo "Umur saya: " . $umur . " tahun";
+
+// Contoh percabangan
+if ($umur >= 18) {
+    echo "Anda sudah dewasa";
+} else {
+    echo "Anda masih remaja";
+}
+?&gt;
+                </pre>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2>Pertemuan 5: Mengontrol Alur Program</h2>
+            <div class="language-tag">PHP</div>
+            <div class="code-example">
+                <pre>
+&lt;?php
+// Contoh penggunaan switch
+$nilaiHuruf = 'B';
+
+switch ($nilaiHuruf) {
+    case 'A':
+        echo "Sangat Baik";
+        break;
+    case 'B':
+        echo "Baik";
+        break;
+    case 'C':
+        echo "Cukup";
+        break;
+    default:
+        echo "Tidak Lulus";
+}
+
+// Contoh penggunaan ternary
+$status = ($umur >= 18) ? "Dewasa" : "Remaja";
+?&gt;
+                </pre>
+            </div>
+        </div>
+
+        <div class="topic-section">
+            <h2>Pertemuan 6: Perulangan dan Array</h2>
+            <div class="language-tag">PHP</div>
+            <div class="code-example">
+                <pre>
+&lt;?php
+// Contoh array
+$matakuliah = [
+    "Pemrograman Web",
+    "Struktur Data",
+    "Basis Data",
+    "Jaringan Komputer"
+];
+
+// Perulangan foreach
+foreach ($matakuliah as $mk) {
+    echo "Mata Kuliah: " . $mk . "&lt;br&gt;";
+}
+
+// Perulangan for
+for ($i = 1; $i <= 5; $i++) {
+    echo "Perulangan ke-" . $i . "&lt;br&gt;";
+}
+
+// Contoh array asosiatif
+$mahasiswa = [
+    "nama" => "Ummu Qoshiroh",
+    "npm" => "2310631170055",
+    "prodi" => "Informatika"
+];
+
+echo "Nama: " . $mahasiswa['nama'];
+?&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Website Personal Ummu Qoshiroh Nur Azziza. Dibuat untuk UTS Pemrograman Berbasis Web</p>
+    </footer>
+</body>
+</html>

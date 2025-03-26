@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Ummu Qoshiroh Nur Azziza</title>
+    <link rel="stylesheet" href="csKontak.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">My Portfolio</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html" class="active">Kontak</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="web-programming.html">Pemrograman Web</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Hubungi Saya</h1>
+            <p>Punya pertanyaan atau ingin berkolaborasi? Kirim pesan di bawah ini!</p>
+        </div>
+
+        <form id="contactForm" class="contact-form" action="proses_kontak.php" method="POST">
+            <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subjek</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Kirim Pesan</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Website Personal Ummu Qoshiroh Nur Azziza. Dibuat untuk UTS Pemrograman Berbasis Web</p>
+    </footer>
+
+    <script>
+        // Fungsi untuk menampilkan notifikasi
+        function showNotification(message, type) {
+            const notificationEl = document.getElementById('notification');
+            notificationEl.textContent = message;
+            notificationEl.className = `notification ${type}`;
+            notificationEl.style.display = 'block';
+
+            // Sembunyikan notifikasi setelah 5 detik
+            setTimeout(() => {
+                notificationEl.style.display = 'none';
+            }, 5000);
+        }
+
+        // Periksa parameter URL untuk status
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const status = urlParams.get('status');
+
+            if (status === 'success') {
+                showNotification('Pesan berhasil dikirim!', 'success');
+            } else if (status === 'error') {
+                showNotification('Gagal mengirim pesan. Silakan coba lagi.', 'error');
+            }
+        });
+    </script>
+</body>
+</html>
